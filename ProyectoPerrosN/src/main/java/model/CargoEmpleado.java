@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 import java.util.List;
 
-@Entity
+//@Entity
 @Table(name="cargoEmpleado")
 public class CargoEmpleado {
     
