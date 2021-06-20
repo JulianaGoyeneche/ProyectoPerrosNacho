@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/estilosTablas.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    
+    <title>Tabla Cargo</title>
+</head>
+
+<body >
+
+    <center>
+
+        <h1>Consultar Cargo del Empleado</h1>
+        <br>
+
+        <div class="container">
+            
+<div class="col-md-6">
+                <table class="table table-striped custab">
+                <thead>
+                
+                    <tr>
+                        <th>ID</th>
+                        <th>Cargo del Empleado</th>
+                        <th class="text-center">Acción</th>
+                    </tr>
+                </thead>
+                        <tr th:each="cEmple:${ListCe}">
+
+                            <td th:text="${cEmple.idCargoEmpleado"></td>
+                            <td th:text="${cEmple.nombreCargoEmpleado"></td>
+                            <td class="text-center"><a class='btn btn-success btn-xs' th:href="@{edit/} + ${cEmple.idCargoEmpleado}"><span class="glyphicon glyphicon-edit"></span>Editar</a> 
+                                <a href="#" class="btn btn-danger btn-xs "onclick="javascript:return confirm('Seguro que desea eliminar el registro?');" th:href="@{delete/} + ${cEmple.idCargoEmpleado}"><span class="glyphicon glyphicon-remove"></span>Borrar</a></td>
+                        </tr>
+                        
+                </table>
+</div>
+            
+        </div>
+    </center>
+    <link rel="stylesheet" href="../../assets/css/estilosTablas.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+</body>
+</html>
+

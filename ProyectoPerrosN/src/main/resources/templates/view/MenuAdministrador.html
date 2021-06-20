@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Menú Administrador</title>
+    <style>
+        a
+        {
+          color: white;
+        }
+    </style>
+</head>
+<body style="background-color: #f1c5abf3;">
+    <nav class="navbar navbar-light bg-light" style="background-color: rgba(253, 192, 60, 0.884); height: 148px;width: 1520px;">
+        <div class="container-fluid">
+            <center>
+                <h1 style="color:#000">
+                Menú Administrador
+                </h1>
+            </center>
+        </div>   
+        <br>
+        <nav class="navbar navbar-light bg-light" style="border: rgb(0, 0, 0) 1px solid; background-color: rgb(0, 0, 0)">
+            <ul class="nav navbar-nav" style="border: rgb(255, 255, 255) 2px solid; font-size: 14pt; background-color: black">
+            <li class="active"><a class="btn btn-outline-light" href="MenuAdministrador.html" style="font-size: 15pt;width: 300px;"><i class="glyphicon glyphicon-home"></i> Menu Principal </a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="btn btn-outline-light" style="width: 150px;" href="Login.html" ><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
+        
+                <li><a class="btn btn-outline-light" style="width: 150px;margin-right: 20px;" href="Login.html" ><i class="glyphicon glyphicon-off"></i> Cerrar Sesion</a></li>
+              </ul>
+
+        <form class="navbar-form navbar-right">
+            <div class="form-group">
+            <button type="sutmit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+            <input type="text" class="form-control" placeholder="search" >
+            </div>
+            </form>
+        
+        </nav>
+      </nav>
+
+      <div class="nav navbar-nav navbar-left">
+        <div class="well" style="width:308px;height: 800px; padding: 20px 0; background-color: black; font-size: 12pt;margin:-7% 0;border: rgb(255, 255, 255) 2px solid;">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-3 col-md-3">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="color: white;"><span class="glyphicon glyphicon-star">
+                                </span> Usuario</a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse " style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarUsuario.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Usuario</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/Usuario.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Usuario</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black;">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" style="color: white;"><span class="glyphicon glyphicon-check">
+                                </span> Rol Usuario</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarRolUsuario.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Rol Usuario</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/RolUsuario.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Rol Usuario</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black;">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" style="color: white;"><span class="glyphicon glyphicon-pawn">
+                                </span> Empleado</a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarEmpleado.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Empleado</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/Empleado.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Empleado</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black;">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" style="color: white;"><span class="glyphicon glyphicon-briefcase">
+                                </span> Cargo Empleado</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarCargoEmpleado.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Cargo Empleado</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/CargoEmpleado.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Cargo Empleado</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black;">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" style="color: white;"><span class="glyphicon glyphicon-ice-lolly-tasted">
+                                </span> Materia Prima</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse" style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarMateriaPrima.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Materia Prima</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/MateriaPrima.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Maeria Prima</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarEntrada.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Entrada</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/Entrada.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Entrada</a>
+                                        </td>
+                                    </tr><tr>
+                                        <td>
+                                            <a href="Formularios/ResgistrarProveedor.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Proveedor</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/Proveedor.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Proveedor</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black;">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseSix" style="color: white;"><span class="glyphicon glyphicon-shopping-cart">
+                                </span> Pedido</a>
+                            </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse" style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarPedido.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Pedido</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/Pedido.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Pedido</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black;">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" style="color: white;"><span class="glyphicon glyphicon-star-empty">
+                                </span> Clientes</a>
+                            </h4>
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse" style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarCliente.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Clientes</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/Cliente.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Clientes</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black;">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseEigth" style="color: white;"><span class="glyphicon glyphicon-apple">
+                                </span> Producto</a>
+                            </h4>
+                        </div>
+                        <div id="collapseEigth" class="panel-collapse collapse" style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarProducto.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Producto</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/Producto.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Producto</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color: black;">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseNine" style="color: white;"><span class="glyphicon glyphicon-equalizer">
+                                </span> Unidad De Medida</a>
+                            </h4>
+                        </div>
+                        <div id="collapseNine" class="panel-collapse collapse" style="background-color: black;">
+                            <div class="panel-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <a href="Formularios/RegistrarUnidadDeMedida.html" style="color: white;"><span class="glyphicon glyphicon-file"></span> Registrar Unidad De Medida</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="List/UnidadDeMedida.html" style="color: white;"><span class="glyphicon glyphicon-list-alt"></span> Consultar Unidad De Medida</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+        </div>
+    </div>
+    <div align="right" >    
+        <div class="col-md-13">   
+    <form class="navbar-form navbar-right">
+
+        <div class="form-group">
+        <div ><img src="../assets/imagenes/combo1.PNG" class="rounded mx-auto d-block"width="275px" height="300px">
+       </div>
+        </div>
+
+        <div class="form-group">
+        <div ><img src="../assets/imagenes/combo2.PNG" class="rounded mx-auto d-block" width="275px" height="300px">
+       </div>
+        </div>
+ 
+        <div class="form-group">
+        <div ><img src="../assets/imagenes/combo3.jpg" class="rounded mx-auto d-block" width="275px" height="300px">
+       </div>
+        </div>
+
+        <div class="form-group">
+        <div ><img src="../assets/imagenes/combo4.PNG" class="rounded mx-auto d-block" width="275px" height="300px">
+        </div>
+        </div>
+        
+
+    </form>
+</div>
+</div>    
+    
+</body>
+</html>

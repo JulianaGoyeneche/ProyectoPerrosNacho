@@ -1,0 +1,45 @@
+.custab{
+    border: 5px solid rgb(0, 0, 0);
+    padding: 6px;
+    margin: 5% 1;
+    box-shadow: 3px 3px 2px rgb(32, 6, 2);
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow: 3px 3px 0px ;
+    transition: 0.5s;
+    }
+
+    .navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background:rgb(0, 0, 0);
+    color: #f2f2f2;
+}
+
+thead{
+    background-color: black;
+    color: white;
+    size: 9;
+}
+
+input[type=search] {
+	background: rgb(252, 249, 249) url(http://hp-proliant.co.uk/qual_images/mob-search-icon.png) no-repeat 9px center;
+	border: solid 1px #ccc;
+	padding: 9px 10px 9px 32px;
+	width: 55px;
+}
+input[type=search]:focus {
+	width: 600px;
+	background-color: #ccc;
+	border-color: rgb(10, 10, 10);
+	border: solid 1px #fff;
+}
+
+body{
+    background-color: rgb(253, 253, 253);
+}
