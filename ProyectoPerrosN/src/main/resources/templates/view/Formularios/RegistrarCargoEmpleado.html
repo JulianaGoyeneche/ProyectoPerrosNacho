@@ -7,7 +7,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <link href="../../assets/css/cssRegistrar.css" rel="stylesheet"/>
     </head>
-    <body style="background-color: #f1c5abf3;">
+    <body>
     
     
         <center>
@@ -17,17 +17,16 @@
                             <h1>Registrar Cargo Empleado</h1>
                         </div>
                         
-                        <div class="form-content" style="background-color: #f0b291e7;">
-                            <form>
+                        <div class="form-content" style="background-color:rgba(253, 192, 60, 0.884);">
+                            <form th:action="@{/CargoEmpleado/save}" method="POST" th:object="${form}">
                                 <div class="col-md-8">
 
                                     <div class="col">
-                                        <label>Id Cargo empleado</label>
-                                      <input type="text" class="form-control" placeholder="Codigo del cargo" >
+                                      <input type="hidden" th:field="*{cemple.idCargoEmpleado}" th:value="*{cemple !=null} ? *{cemple.idCargoEmpleado}" class="form-control" placeholder="Codigo del cargo" >
                                     </div>
                                     <div class="col">
                                         <label>Nombre Cargo Empleado </label>
-                                      <input type="text" class="form-control" placeholder="Cargo como 'Cajer@'">
+                                      <input type="text" class="form-control" th:field="*{cemple.nombreCargoEmpleado}" th:value="*{cemple !=null} ? *{cemple.nombreCargoEmpleado}"placeholder="Cargo como 'Cajer@'">
                                     </div>
                                 </div>
     

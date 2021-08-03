@@ -7,7 +7,7 @@
     
     <link href="../../assets/css/cssRegistrar.css" rel="stylesheet"/>
 </head>
-<body style="background-color: #f1c5abf3;">
+<body>
 
 
     <center>
@@ -17,51 +17,58 @@
                         <h1>Registrar Empleado</h1>
                     </div>
                     
-                    <div class="form-content" style="background-color: #f0b291e7;">
-                        <form>
+                    <div class="form-content" style="background-color: rgba(253, 192, 60, 0.884);">
+                        <form  th:action="@{/Empleado/save}" method="POST" th:object="${form}">
                             <div class="col-md-8">
 
                                 <div  class="form-group">
-                                    <input type="hidden" class="form-control"  name="id" >
+                                    <input type="hidden" class="form-control"  name="id" th:field="*{Empleado.idEmpleado}" th:value="*{Empleado != null} ? *{Empleado.idEmpleado}" >
                                 </div>
                             <div class="row">
                                 <div class="col">
                                     <label>Nombre del Empleado</label>
-                                  <input type="text" class="form-control" placeholder="nombres">
+                                  <input type="text" class="form-control" placeholder="nombres" th:field="*{Empleado.nombreEmpleado}" th:value="*{Empleado != null} ? *{Empleado.nombreEmpleado}">
                                 </div>
                                 <div class="col">
                                     <label>Apellido del Empleado</label>
-                                  <input type="text" class="form-control" placeholder="apellidos">
+                                  <input type="text" class="form-control" placeholder="apellidos" th:field="*{Empleado.apellidoEmpleado}" th:value="*{Empleado != null} ? *{Empleado.apellidoEmpleado}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress2">Direccion del Empleado</label>
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" th:field="*{Empleado.direccionEmpleado}" th:value="*{Empleado != null} ? *{Empleado.direccionEmpleado}">
                             </div>
                             <div class="form-group">
                                 <label>Celular del Empleado</label>
-                                <input type="text" class="form-control" placeholder="como 320-0000-000">
+                                <input type="text" class="form-control" placeholder="como 320-0000-000" th:field="*{Empleado.celularEmpleado}" th:value="*{Empleado != null} ? *{Empleado.celularEmpleado}">
                             </div>
                             <div class="row">
 
                                 <div class="col">
                                     <label>Documento del Empleado</label>
-                                  <input type="text" class="form-control" placeholder="como num de Cedula">
+                                  <input type="text" class="form-control" placeholder="como num de Cedula" th:field="*{Empleado.documentoEmpleado}" th:value="*{Empleado != null} ? *{Empleado.documentoEmpleado}">
                                 </div>
                                 <div class="col">
                                     <label for="inputAddress2">Fecha de nacimiento del Cliente</label>
-                                <input type="date" class="form-control" ">
+                                <input type="date" class="form-control" th:field="*{Empleado.fechaNacimiento}" th:value="*{Empleado != null} ? *{Empleado.fechaNacimiento}">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <label>Id Usuario del Empleado</label>
-                                  <input type="text" class="form-control" placeholder="codigo de Usuario">
+                                  <input type="text" class="form-control" placeholder="codigo de Usuario" th:field="*{Empleado.idUsuarioFK}" th:value="*{Empleado != null} ? *{Empleado.idUsuarioFK}">
                                 </div>
                                 <div class="col">
-                                    <label for="inputAddress2">Id Cargo del Empleado</label>
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Cargo del empleado">
-                                </div>
+                                    <label for="inputState">Cargo Empleado</label>
+                                    <select id="inputState" class="form-control" th:object="${form}" th:field="*{Empleado.idCargoEmpleadoFK}">
+                                        <option th:each="tdItem:*{lcemple}"
+                                        th:value="${tdItem.idCargoEmpleado}"
+                                        th:utext="${tdItem.nombreCargoEmpleado}">
+
+                                        </option>
+
+                                    </select>
+                               </div>
                             </div>
                             <br>
                             <div>

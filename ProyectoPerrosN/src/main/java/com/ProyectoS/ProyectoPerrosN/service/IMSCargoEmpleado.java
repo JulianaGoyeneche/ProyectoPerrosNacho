@@ -21,15 +21,20 @@ public class IMSCargoEmpleado implements ISCargoEmpleado {
     private ModelMapper modelMapper;
 
     @Override
-    public CargoEmpleadoDto save(CargoEmpleadoDto cargoEmpleado) {
-        
-        return null;
+    public CargoEmpleadoDto save(CargoEmpleadoDto CargoEmpleado) {
+        CargoEmpleado ceEntity=modelMapper.map(CargoEmpleado,CargoEmpleado.class);
+        repotd.save(ceEntity);
+        return modelMapper.map(ceEntity,CargoEmpleadoDto.class);
     }
 
     @Override
     public CargoEmpleadoDto get(Integer id) {
+
+        CargoEmpleado ceEntity=repotd.getById(id);
+        CargoEmpleadoDto cDto=modelMapper.map(ceEntity, CargoEmpleadoDto.class);
+
         
-        return null;
+        return cDto;
     }
 
     @Override
@@ -43,6 +48,7 @@ public class IMSCargoEmpleado implements ISCargoEmpleado {
     @Override
     public void delete(Integer id) {
         
+        repotd.deleteById(id);
         
     }
     

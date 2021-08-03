@@ -1,6 +1,7 @@
 package com.ProyectoS.ProyectoPerrosN.model;
 
-import java.time.LocalDateTime;
+
+
 import java.util.List;
 
 import javax.persistence.Column;
@@ -12,6 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+
 @Entity
 @Table(name="empleado")
 public class Empleado {
@@ -35,8 +38,8 @@ public class Empleado {
     @Column(name="documentoEmpleado")
     private int documentoEmpleado;
 
-    @Column(name="fechaNacimiento")
-    private LocalDateTime fechaNacimiento;
+    @Column(name="fechaNacimiento",length = 100)
+    private String fechaNacimiento;
 
     @Column(name="idUsuarioFK")
     private int idUsuarioFK;
@@ -59,8 +62,8 @@ public class Empleado {
     }
 
     public Empleado(int idEmpleado, String nombreEmpleado, String apellidoEmpleado, String direccionEmpleado,
-            int celularEmpleado, int documentoEmpleado, LocalDateTime fechaNacimiento, int idUsuarioFK,
-            int idCargoEmpleadoFK) {
+            int celularEmpleado, int documentoEmpleado, String fechaNacimiento, int idUsuarioFK, int idCargoEmpleadoFK,
+            CargoEmpleado cargoP, Usuario usuarioP, List<Pedido> pedidos) {
         this.idEmpleado = idEmpleado;
         this.nombreEmpleado = nombreEmpleado;
         this.apellidoEmpleado = apellidoEmpleado;
@@ -70,6 +73,9 @@ public class Empleado {
         this.fechaNacimiento = fechaNacimiento;
         this.idUsuarioFK = idUsuarioFK;
         this.idCargoEmpleadoFK = idCargoEmpleadoFK;
+        CargoP = cargoP;
+        UsuarioP = usuarioP;
+        this.pedidos = pedidos;
     }
 
     public int getIdEmpleado() {
@@ -120,11 +126,11 @@ public class Empleado {
         this.documentoEmpleado = documentoEmpleado;
     }
 
-    public LocalDateTime getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -143,6 +149,29 @@ public class Empleado {
     public void setIdCargoEmpleadoFK(int idCargoEmpleadoFK) {
         this.idCargoEmpleadoFK = idCargoEmpleadoFK;
     }
-    
-    
+
+    public CargoEmpleado getCargoP() {
+        return CargoP;
+    }
+
+    public void setCargoP(CargoEmpleado cargoP) {
+        CargoP = cargoP;
+    }
+
+    public Usuario getUsuarioP() {
+        return UsuarioP;
+    }
+
+    public void setUsuarioP(Usuario usuarioP) {
+        UsuarioP = usuarioP;
+    }
+
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
 }
